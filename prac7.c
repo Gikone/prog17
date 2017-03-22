@@ -1,6 +1,10 @@
-/*
-*unico autor: rodrigo diaz
-*depurador y tecleador: diego gonzalez 
+/**
+*Title: Practica 
+*Descripcion: Ejercicios correspondientes a las practicas 7
+*@author:D.G.Roman and R.D.Garcia
+*@organization: Univesity of Burgos
+*@date: 2017-03-20
+*@version: 1.0
 */
 
 #include <stdio.h>
