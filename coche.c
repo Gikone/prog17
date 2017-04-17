@@ -11,6 +11,8 @@
 *
 * AUTHOR : Rodrigo Díaz    START DATE : 27 Mar 2017
 *
+*TRADUCTOR: Diego Gonzalez
+*
 * CHANGES:
 * 1.0 [29MAR2017] - Initial release
 */
@@ -164,7 +166,7 @@ int numeroChar() {
   return charNumero;
 }
 
-int filasMax() {
+int filasMax() { //calcula la fila que mas ocupa
   char c;
   int tempMax = 0, currentRowCount = 0, currentRowPos = 0, tempMaxPos = 0;
   FILE *f;
@@ -184,13 +186,13 @@ int filasMax() {
     }
   }
   fclose(f);
-  return tempMaxPos;
+  return tempMaxPos; 
 }
 
-void printRow() {
+void printRow() { //te pide un numero de columna y la muestra
   FILE *f;
   f = fopen("car.txt", "r");
-  int rowSelected = -1, rowNum = nRows(f), read, currentRowCount = 0;
+  int rowSelected = -1, rowNum = nRows(f), read, currentRowCount = 0; //valida hasta que este bien puesto
   char enter, c;
   while (rowSelected < 1) {
     printf("Insert row number to print: ");
@@ -226,9 +228,9 @@ void printFile() {
   f = fopen("car.txt", "r");
   printf("---- FILE CONTENTS ----\n");
   c = fgetc(f);
-  do {
+  do { 
     putchar(c);
-    c = fgetc(f);
+    c = fgetc(f); //coge el caracter y mientras no sea fin de archivo repite, cuando se fin cierra
   } while (!feof(f));
   fclose(f);
   printf("\n-----------------------\n\n");
